@@ -18,11 +18,11 @@ Now you should be connected on /dev/ttyUSB0 (test with ls /dev/tty*)
 
 Now first clear all rubish on there:
 
-esptool.py --chip esp32 --port /dev/ttyUSB0 erase_flash
+esptool.py --chip esp32s3 --port /dev/ttyUSB0 erase_flash
 
 Then flash your firmware
 
-esptool.py --chip esp32s3 --port com22 write_flash -z 0 <filename>
+esptool.py --chip esp32s3 --port /dev/ttyUSB0 write_flash -z 0 \<filename\>
 
 Now esptool.py flash_id should give you info like:
 
